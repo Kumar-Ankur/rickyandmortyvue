@@ -4,7 +4,7 @@
       <img :src="this.item.image" :alt="name" class="flex-item_container-img" />
       <div class="intro">
         <div class="container-name">{{ this.item.name }}</div>
-        <div class="container-creation">2 years ago</div>
+        <div class="container-creation">Id:{{ this.item.id }}  created: {{ year }} years ago</div>
       </div>
 
       <div class="container-detail">
@@ -25,12 +25,12 @@
 
         <div class="container-detail-origin">
           <div class="detail-title">{{ ORIGIN_LIST }}</div>
-          <div class="detail-value">{{ this.item.originName }}</div>
+          <div class="detail-value">{{ this.item.origin.name }}</div>
         </div>
 
-        <div class="container-detail-origin">
+        <div class="container-detail-location">
           <div class="detail-title">{{ LOCATION_LIST }}</div>
-          <div class="detail-value">{{ this.item.locationName }}</div>
+          <div class="detail-value">{{ this.item.location.name }}</div>
         </div>
       </div>
     </div>
@@ -39,6 +39,7 @@
 
 <script>
 import * as constants from "../../constants";
+import { getCreatedYear } from '../../utils';
 export default {
   props: ["item", "index"],
   data() {
@@ -53,6 +54,11 @@ export default {
   watch: {
     item(newCharacter, oldCharacter) {
       this.item = newCharacter;
+    }
+  },
+  computed: {
+    year() {
+      return getCreatedYear(this.item.created)
     }
   }
 };
