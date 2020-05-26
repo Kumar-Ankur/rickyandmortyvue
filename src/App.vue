@@ -48,8 +48,7 @@ export default {
     appSearchView: SearchView
   },
   methods: {
-    getSearchData(filteredOriginItem) {
-        const search_text = this.$store.getters.getSearchText
+    getSearchData(filteredOriginItem, search_text) {
          let filteredSearchItem =
             search_text.length > 0
         ? filteredOriginItem.filter((item) => {
@@ -59,25 +58,25 @@ export default {
 
     return filteredSearchItem;
     },
-    getOriginFilter(filteredGenderItem) {
+    getOriginFilter(filteredGenderItem, filterOriginData) {
       let filteredOriginItem =
-        this.filterOriginData.length > 0
+        filterOriginData.length > 0
           ? filteredGenderItem.filter(item => {
-              return this.filterOriginData.indexOf(item.origin.name) >= 0;
+              return filterOriginData.indexOf(item.origin.name) >= 0;
             })
           : filteredGenderItem;
-      return this.getSearchData(filteredOriginItem)
+      return this.getSearchData(filteredOriginItem, this.$store.getters.getSearchText)
     },
 
-    getGenderFilter(filterSpeciesData) {
+    getGenderFilter(filterSpeciesData, filterGenderData) {
       let filteredGenderItem =
-        this.filterGenderData.length > 0
+        filterGenderData.length > 0
           ? filterSpeciesData.filter(item => {
-              return this.filterGenderData.indexOf(item.gender) >= 0;
+              return filterGenderData.indexOf(item.gender) >= 0;
             })
           : filterSpeciesData;
 
-      return this.getOriginFilter(filteredGenderItem);
+      return this.getOriginFilter(filteredGenderItem, this.filterOriginData);
     },
     getSpeciesFilter(all_characters, filterSpeciesData) {
       let filteredItem =
@@ -86,7 +85,7 @@ export default {
               return filterSpeciesData.indexOf(item.species) >= 0;
             })
           : all_characters;
-      return this.getGenderFilter(filteredItem);
+      return this.getGenderFilter(filteredItem, this.filterGenderData);
     }
   },
   computed: {

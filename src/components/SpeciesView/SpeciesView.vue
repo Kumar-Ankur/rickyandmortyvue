@@ -1,5 +1,5 @@
 <template>
-  <div class="species-content">
+  <div class="species-content" data-test="component-species">
     <h2>{{ SPECIES_FILTER }}</h2>
 
     <app-check-box

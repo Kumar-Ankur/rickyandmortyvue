@@ -8,7 +8,8 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --inline --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "test": "jest --coverage"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
@@ -18,17 +19,40 @@
     "vuex": "^3.4.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-3": "^6.24.1",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-stage-3": "^7.8.3",
+    "@testing-library/vue": "^5.0.3",
+    "@vue/test-utils": "^1.0.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^26.0.1",
+    "babel-loader": "^8.1.0",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.4",
     "html-webpack-plugin": "^4.3.0",
-    "vue-loader": "^13.0.5",
-    "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^3.1.11"
+    "jest": "^26.0.1",
+    "jest-vue": "^0.8.2",
+    "vue-jest": "^3.0.5",
+    "vue-loader": "^15.9.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      "^.+\\.js$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!vue-awesome|vue-quill-editor)"
+    ]
   }
 }

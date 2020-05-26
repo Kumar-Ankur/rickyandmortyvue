@@ -32,8 +32,7 @@ export const getCreatedYear = (createdDate) => {
    * @param { Function } addFilteredData - function to add the data in filter state
    * @param { Function} removeFilteredData - function to remove the data from filter state.
    */
-  export const getFilteredData = (checkedData, addFilteredData, removeFilteredData, modelName, store) => {
-    console.log(store)
+  export const getFilteredData = (event , modelName, store) => {
     if(event.target.checked) {
       if(modelName === 'species') {
         store.dispatch("addSpeciesFilteredData", event.target.value);
@@ -61,11 +60,4 @@ export const getCreatedYear = (createdDate) => {
         return false;
       }
     }
-    // if (event.target.checked) {
-    //   addFilteredData(event.target.value);
-    //   return true;
-    // } else {
-    //   removeFilteredData(event.target.value);
-    //   return false;
-    // }
   };

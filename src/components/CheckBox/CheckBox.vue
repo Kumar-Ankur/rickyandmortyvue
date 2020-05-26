@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     handlecheckBox(e) {
-      getFilteredData(e, this.addFilter, this.removeFilter, this.modelName, this.store);
+      getFilteredData(e, this.modelName, this.store);
       eventBus.$emit('updateFilteredData')
     }
   },
