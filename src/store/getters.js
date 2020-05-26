@@ -1,0 +1,1 @@
+export const characters = state => state.all_characters
