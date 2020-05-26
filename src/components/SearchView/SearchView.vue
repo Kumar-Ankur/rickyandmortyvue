@@ -53,6 +53,12 @@ export default {
   transition: border-color 0.2s;
 }
 
+  @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+    .form__field {
+      padding: 20px 0;
+    }
+  }
+
 .form__field::placeholder {
   color: transparent;
 }
@@ -62,6 +68,12 @@ export default {
   cursor: text;
   top: 20px;
 }
+
+  @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+    .form__field:placeholder-shown ~ .form__label {
+      font-size: 4.5rem;
+    }
+  }
 
 .form__label {
   position: absolute;

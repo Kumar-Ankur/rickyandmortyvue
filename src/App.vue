@@ -66,8 +66,6 @@ export default {
               return this.filterOriginData.indexOf(item.origin.name) >= 0;
             })
           : filteredGenderItem;
-
-    //   return filteredOriginItem;
       return this.getSearchData(filteredOriginItem)
     },
 
@@ -173,7 +171,7 @@ body {
   top: 15rem;
 }
 .main {
-  background: linear-gradient(to right, #3e5151, #decba4);
+  background: linear-gradient(to right, #283048, #859398);
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -191,7 +189,7 @@ body {
   text-align: center;
   position: relative;
   top: 2rem;
-  font-size: 2rem;
+  font-size: 3rem;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
@@ -210,7 +208,7 @@ body {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .heading {
-    font-size: 0.8rem;
+    font-size: 3rem;
   }
 
   @media only screen and (min-device-width: 1024px) and (max-device-width: 1365px) {
@@ -239,6 +237,7 @@ body {
     .sortBox {
       width: 100%;
       left: 1.8rem;
+      top: 7rem;
     }
   }
 
@@ -280,12 +279,29 @@ body {
     }
   }
 
+  @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+    .viewcontent {
+      top: 0;
+    }
+  }
+
+    /* @media only screen and (max-device-width: 568px) and (min-device-width: 320px)  {
+    .viewcontent {
+    top:0
+} */
+
   .main_functionality {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     transition: ease-in-out 1s all;
     padding-top: 5rem;
+  }
+
+  @media only screen and (max-device-width: 568px) and (min-device-width: 320px)  {
+    .main_functionality {
+    padding-top: 10rem;
+}
   }
 
   .main_functionality-species {

@@ -66,7 +66,7 @@ export default {
 
 <style scoped>
 .flex-item {
-  height: 30rem;
+  height: 40rem;
   width: 30rem;
   border: 1px solid #e4e4e4;
   margin-bottom: 2rem;
@@ -74,6 +74,14 @@ export default {
   transition: ease-in-out 1s all;
   cursor: pointer;
 }
+
+  @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+    .flex-item {
+      width: 40rem;
+      height: 55rem;
+      margin-bottom: 5rem;
+    }
+  }
 
 .flex-item:hover {
   transform: translateY(-1rem);
@@ -85,6 +93,12 @@ export default {
   transition: ease-in-out 1s all;
 }
 
+  @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+    .flex-item_container {
+      width: 100%;
+    }
+  }
+
 .flex-item_container-img {
   height: 19rem;
   width: 100%;
@@ -93,7 +107,7 @@ export default {
 
 .intro {
   width: 100%;
-  height: 4.5rem;
+  height: 9rem;
   position: relative;
   top: -4.65rem;
   z-index: 100;
@@ -105,13 +119,14 @@ export default {
   top: 0.5rem;
   left: 0.3rem;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 2rem;
   letter-spacing: 1px;
   color: white;
   width: 90%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: gold;
 }
 
 @media only screen and (max-width: 949px) and (min-width: 550px),
@@ -126,8 +141,9 @@ export default {
 .container-creation {
   position: absolute;
   color: white;
-  top: 2.2rem;
+  top: 4.2rem;
   left: 0.5rem;
+  font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 949px) and (min-width: 550px),
@@ -141,12 +157,19 @@ export default {
 
 .container-detail {
   width: 100%;
-  height: 10rem;
+  height: 15rem;
   position: relative;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   top: -4.65rem;
   background: #d3d3d380;
 }
+
+  @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+    .container-detail {
+      height: 29rem;
+      font-size: 2.2rem;
+    }
+  }
 
 .container-detail-status {
   position: relative;
@@ -155,23 +178,47 @@ export default {
 
 .container-detail-species {
   position: relative;
-  top: 3rem;
+  top: 4rem;
 }
+
+  @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+    .container-detail-species {
+      top: 7rem;
+    }
+  }
 
 .container-detail-gender {
-  position: relative;
-  top: 5rem;
-}
-
-.container-detail-origin {
   position: relative;
   top: 7rem;
 }
 
+  @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+    .container-detail-gender {
+      top: 13rem;
+    }
+  }
+
+.container-detail-origin {
+  position: relative;
+  top: 10rem;
+}
+
+  @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+    .container-detail-origin {
+      top: 19rem;
+    }
+  }
+
 .container-detail-location {
   position: relative;
-  top: 9rem;
+  top: 13rem;
 }
+
+  @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+    .container-detail-location {
+      top: 25rem;
+    }
+  }
 
 .detail-title {
   left: 1rem;
@@ -216,6 +263,17 @@ export default {
     right: 0.1rem;
   }
 }
+
+  @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+    .detail-value {
+      display: inline-block;
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    right: 0.1rem;
+    }
+  }
 
 @media only screen and (max-width: 949px) and (min-width: 550px),
   only screen and (max-width: 549px) and (min-width: 400px),

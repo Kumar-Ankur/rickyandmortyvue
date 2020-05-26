@@ -49,9 +49,8 @@ export default {
 
 <style scoped>
 .message {
-  width: 90vw;
   margin-top: 3rem;
-  background: linear-gradient(to right, #3c3b3f, #605c3c);
+  background: linear-gradient(to right,#16222A, #3A6073);
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -62,12 +61,24 @@ export default {
   cursor: pointer;
   font-size: 1.5rem;
 }
+
+  @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+    .message-header {
+      font-size: 4rem;
+    }
+  }
 .message-body {
   padding: 0;
   max-height: 50em;
   overflow: hidden;
   transition: 0.3s ease all;
 }
+
+  @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+    .message-body {
+      font-size: 3rem;
+    }
+  }
 .is-closed .message-body {
   max-height: 0;
 }
