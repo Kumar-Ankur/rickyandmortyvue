@@ -18,9 +18,11 @@ describe("App view component test case", () => {
     });
 
     wrapper = shallowMount(App, {
-      data: {
-        filteredItems: [],
-        search_value: ""
+      data: () => {
+        return {
+          filteredItems: [],
+          search_value: ""
+        };
       },
       mocks: {
         $store: {
@@ -31,13 +33,17 @@ describe("App view component test case", () => {
             getSearchText: ""
           },
           dispatch: {
-            updateCharacter: (data) => data
+            updateCharacter: data => data
           }
         }
       },
       localVue: localVue
     });
   });
+
+  test('generate snapshot testing', () => {
+    expect(wrapper.html()).toMatchSnapshot();
+  })
 
   test("check `filterGenderData` call on computed hooks", () => {
     expect(wrapper.vm.filterGenderData).toStrictEqual([]);
@@ -56,32 +62,35 @@ describe("App view component test case", () => {
   });
 
   test("check `getSpeciesFilter` call on methods", () => {
-      const res = wrapper.vm.getSpeciesFilter([1,2,3],[1])
-      expect(res).toStrictEqual([])
+    const res = wrapper.vm.getSpeciesFilter([1, 2, 3], [1]);
+    expect(res).toStrictEqual([]);
   });
 
   test("check `getGenderFilter` call on methods", () => {
-    const res = wrapper.vm.getGenderFilter([1,2,4],[1])
-    expect(res).toStrictEqual([])
-});
+    const res = wrapper.vm.getGenderFilter([1, 2, 4], [1]);
+    expect(res).toStrictEqual([]);
+  });
 
-test("check `getOriginFilter` call on methods", () => {
-    const res = wrapper.vm.getOriginFilter([{origin: { name: 'rick'}}],[""])
-    expect(res).toStrictEqual([])
-});
+  test("check `getOriginFilter` call on methods", () => {
+    const res = wrapper.vm.getOriginFilter(
+      [{ origin: { name: "rick" } }],
+      [""]
+    );
+    expect(res).toStrictEqual([]);
+  });
 
-test("check `getSearchData` call on methods", () => {
-    const res = wrapper.vm.getSearchData([{name: 'rick'}],"test")
-    expect(res).toStrictEqual([])
-});
+  test("check `getSearchData` call on methods", () => {
+    const res = wrapper.vm.getSearchData([{ name: "rick" }], "test");
+    expect(res).toStrictEqual([]);
+  });
 
-  test('check filteredItems method inside watch', () => {
-    wrapper.vm.$options.watch.filteredItems.call(wrapper.vm, [], [])
-    expect(wrapper.vm.$data.filteredItems).toStrictEqual([])
-  })
+  test("check filteredItems method inside watch", () => {
+    wrapper.vm.$options.watch.filteredItems.call(wrapper.vm, [], []);
+    expect(wrapper.vm.$data.filteredItems).toStrictEqual([]);
+  });
 
-  test('check filteredItems method inside watch', () => {
-    wrapper.vm.$options.watch.filteredItems.call(wrapper.vm, [], [])
-    expect(wrapper.vm.$data.filteredItems).toStrictEqual([])
+  test("check filteredItems method inside watch", () => {
+    wrapper.vm.$options.watch.filteredItems.call(wrapper.vm, [], []);
+    expect(wrapper.vm.$data.filteredItems).toStrictEqual([]);
   });
 });

@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test list item component data attribute check 1`] = `
+"<div class=\\"flex-item\\">
+  <div class=\\"flex-item_container\\"><img src=\\"\\" alt=\\"Test\\" class=\\"flex-item_container-img\\">
+    <div class=\\"intro\\">
+      <div class=\\"container-name\\">Test</div>
+      <div class=\\"container-creation\\">Id:1 created: NaN years ago</div>
+    </div>
+    <div class=\\"container-detail\\">
+      <div class=\\"container-detail-status\\">
+        <div class=\\"detail-title\\">STATUS</div>
+        <div class=\\"detail-value\\"></div>
+      </div>
+      <div class=\\"container-detail-species\\">
+        <div class=\\"detail-title\\">SPECIES</div>
+        <div class=\\"detail-value\\"></div>
+      </div>
+      <div class=\\"container-detail-gender\\">
+        <div class=\\"detail-title\\">GENDER</div>
+        <div class=\\"detail-value\\">male</div>
+      </div>
+      <div class=\\"container-detail-origin\\">
+        <div class=\\"detail-title\\">ORIGIN</div>
+        <div class=\\"detail-value\\"></div>
+      </div>
+      <div class=\\"container-detail-location\\">
+        <div class=\\"detail-title\\">LOCATION</div>
+        <div class=\\"detail-value\\"></div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`test list item component snapshot testing 1`] = `
+"<div class=\\"flex-item\\">
+  <div class=\\"flex-item_container\\"><img src=\\"\\" alt=\\"Test\\" class=\\"flex-item_container-img\\">
+    <div class=\\"intro\\">
+      <div class=\\"container-name\\">Test</div>
+      <div class=\\"container-creation\\">Id:1 created: NaN years ago</div>
+    </div>
+    <div class=\\"container-detail\\">
+      <div class=\\"container-detail-status\\">
+        <div class=\\"detail-title\\">STATUS</div>
+        <div class=\\"detail-value\\"></div>
+      </div>
+      <div class=\\"container-detail-species\\">
+        <div class=\\"detail-title\\">SPECIES</div>
+        <div class=\\"detail-value\\"></div>
+      </div>
+      <div class=\\"container-detail-gender\\">
+        <div class=\\"detail-title\\">GENDER</div>
+        <div class=\\"detail-value\\">male</div>
+      </div>
+      <div class=\\"container-detail-origin\\">
+        <div class=\\"detail-title\\">ORIGIN</div>
+        <div class=\\"detail-value\\"></div>
+      </div>
+      <div class=\\"container-detail-location\\">
+        <div class=\\"detail-title\\">LOCATION</div>
+        <div class=\\"detail-value\\"></div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;

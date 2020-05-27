@@ -1,7 +1,7 @@
 <template>
   <div key="{index}" class="flex-item">
     <div class="flex-item_container">
-      <img :src="this.item.image" :alt="name" class="flex-item_container-img" />
+      <img :src="this.item.image" :alt="this.item.name" class="flex-item_container-img" />
       <div class="intro">
         <div class="container-name">{{ this.item.name }}</div>
         <div class="container-creation">Id:{{ this.item.id }}  created: {{ year }} years ago</div>

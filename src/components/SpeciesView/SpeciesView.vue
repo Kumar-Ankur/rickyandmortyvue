@@ -6,8 +6,6 @@
       v-for="(data, index) in speciesData"
       :key="index"
       :data="data"
-      :addFilter="addFilter"
-      :removeFilter="removeFilter"
       :modelName="modelName"
       :store="store"
     ></app-check-box>
@@ -19,6 +17,7 @@ import CheckBox from "../CheckBox/CheckBox.vue";
 import * as constants from "../../constants";
 import { getCheckBoxData } from "../../utils";
 export default {
+  name: 'app-species-view',
   data() {
     return {
       SPECIES: constants.SPECIES,

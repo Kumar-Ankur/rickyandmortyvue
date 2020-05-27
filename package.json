@@ -9,7 +9,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "test": "jest --coverage"
+    "test": "jest --coverage --watch"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
@@ -53,6 +53,7 @@
     },
     "transformIgnorePatterns": [
       "node_modules/(?!vue-awesome|vue-quill-editor)"
-    ]
+    ],
+    "setupFiles": ["<rootDir>/env-setup.js"]
   }
 }

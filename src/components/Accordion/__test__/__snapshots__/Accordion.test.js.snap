@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`unit test case for accordion component generate snapshot test 1`] = `
+"<section id=\\"app\\" class=\\"section container\\">
+  <article class=\\"message is-closed is-dark\\">
+    <div class=\\"message-header\\">Test</div>
+    <div class=\\"message-body\\">
+      <div class=\\"message-content\\">
+        <app-gender-view-stub></app-gender-view-stub>
+        <app-origin-view-stub></app-origin-view-stub>
+        <app-species-view-stub></app-species-view-stub>
+      </div>
+    </div>
+  </article>
+</section>"
+`;

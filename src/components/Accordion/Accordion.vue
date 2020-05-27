@@ -4,9 +4,9 @@
       <div class="message-header" @click="toggleAccordion">{{ text }}</div>
       <div class="message-body">
         <div class="message-content">
-          <app-species-view></app-species-view>
             <app-gender-view></app-gender-view>
             <app-origin-view></app-origin-view>
+            <app-species-view></app-species-view>
         </div>
       </div>
     </article>
@@ -19,7 +19,7 @@ import GenderView from '../GenderView/GenderView.vue';
 import OriginView from '../OriginView/OriginView.vue';
 
 export default {
-    props: ['text'],
+  props: ['text'],
   data() {
     return {
       isOpen: false
