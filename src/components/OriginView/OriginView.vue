@@ -25,8 +25,6 @@ export default {
       ORIGIN_FILTER: constants.ORIGIN_FILTER,
       originData: [],
       modelName: 'origin',
-      addFilter: this.$store.dispatch("addOriginFilteredData"),
-      removeFilter: this.$store.dispatch("removeOriginFilteredData"),
       store: this.$store
     };
   },

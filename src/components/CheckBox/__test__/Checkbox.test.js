@@ -11,6 +11,6 @@ describe('check checkbox component', () => {
         const wrapper = shallowMount(Checkbox)
         const inp = wrapper.find('input')
         inp.trigger('click')
-        expect(wrapper.isVueInstance()).toBe(true)
+        console.log(wrapper.html())
     })
 })

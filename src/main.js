@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueResource from 'vue-resource';
-import App from './App.vue';
+import App from './App/App.vue'
 import { store } from './store/store';
 
 export const eventBus = new Vue();

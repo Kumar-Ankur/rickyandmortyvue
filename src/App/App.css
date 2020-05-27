@@ -1,0 +1,170 @@
+body {
+    padding: 0px;
+    margin: 0;
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: ease-in-out 1s all;
+  }
+  
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  html,
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .norecord {
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    top: 15rem;
+  }
+  .main {
+    background: linear-gradient(to right, #283048, #859398);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  .main_input {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .heading {
+    text-align: center;
+    position: relative;
+    top: 2rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+  @media only screen and (max-width: 949px) and (min-width: 550px),
+    only screen and (max-width: 549px) and (min-width: 400px),
+    only screen and (max-width: 399px) and (min-width: 350px),
+    only screen and (max-width: 349px) {
+    .heading {
+      top: 1rem;
+      font-size: 1rem;
+    }
+  }
+  
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+    .heading {
+      font-size: 3rem;
+    }
+  
+    @media only screen and (min-device-width: 1024px) and (max-device-width: 1365px) {
+      .heading {
+        font-size: 1.5rem;
+      }
+    }
+  
+    .sortBox {
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      transition: ease-in-out 1s all;
+    }
+    @media only screen and (max-width: 949px) and (min-width: 550px),
+      only screen and (max-width: 549px) and (min-width: 400px),
+      only screen and (max-width: 399px) and (min-width: 350px),
+      only screen and (max-width: 349px) {
+      .sortBox {
+        top: 3rem;
+        right: 3rem;
+      }
+    }
+  
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+      .sortBox {
+        width: 100%;
+        left: 1.8rem;
+        top: 7rem;
+      }
+    }
+  
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+      .sortBox {
+        width: 100%;
+        left: 2.8rem;
+      }
+    }
+  
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      .sortBox {
+        left: 15rem;
+      }
+    }
+  
+    @media only screen and (min-device-width: 1024px) and (max-device-width: 1365px) {
+      .sortBox {
+        left: 23rem;
+        top: 5rem;
+      }
+    }
+  
+    .viewcontent {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      transition: ease-in-out 1s all;
+      position: relative;
+      top: 9rem;
+    }
+  
+    @media only screen and (max-width: 949px) and (min-width: 550px),
+      only screen and (max-width: 549px) and (min-width: 400px),
+      only screen and (max-width: 399px) and (min-width: 350px),
+      only screen and (max-width: 349px) {
+      .viewcontent {
+        top: 5rem;
+      }
+    }
+  
+    @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+      .viewcontent {
+        top: 0;
+      }
+    }
+  
+      /* @media only screen and (max-device-width: 568px) and (min-device-width: 320px)  {
+      .viewcontent {
+      top:0
+  } */
+  
+    .main_functionality {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      transition: ease-in-out 1s all;
+      padding-top: 5rem;
+    }
+  
+    @media only screen and (max-device-width: 568px) and (min-device-width: 320px)  {
+      .main_functionality {
+      padding-top: 10rem;
+  }
+    }
+  
+    .main_functionality-species {
+      width: 100%;
+    }
+  }

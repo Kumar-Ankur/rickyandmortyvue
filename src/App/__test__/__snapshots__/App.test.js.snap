@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App view component test case generate snapshot testing 1`] = `
+"<div class=\\"main\\">
+  <div class=\\"heading\\">Rick and Morty Show</div>
+  <div class=\\"sortBox\\">
+    <app-sort-button-stub></app-sort-button-stub>
+  </div>
+  <div class=\\"main_functionality\\">
+    <div class=\\"main_functionality-species\\">
+      <app-accordion-stub text=\\"Want to filter Something ?\\"></app-accordion-stub>
+    </div>
+  </div>
+  <div class=\\"main_input\\">
+    <app-search-view-stub></app-search-view-stub>
+  </div>
+  <div class=\\"viewcontent\\">
+    <div>
+      <div class=\\"norecord\\">No records found. Search with different Filter !!!!</div>
+    </div>
+  </div>
+</div>"
+`;

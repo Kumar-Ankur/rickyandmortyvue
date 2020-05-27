@@ -6,8 +6,6 @@
       v-for="(data, index) in genderData"
       :key="index"
       :data="data"
-      :addFilter="addFilter"
-      :removeFilter="removeFilter"
       :modelName="modelName"
       :store="store"
     ></app-check-box>
@@ -25,8 +23,6 @@ export default {
       GENDER_FILTER: constants.GENDER_FILTER,
       genderData: [],
       modelName: 'gender',
-      addFilter: this.$store.dispatch("addGenderFilteredData"),
-      removeFilter: this.$store.dispatch("removeGenderFilteredData"),
       store: this.$store
     };
   },
